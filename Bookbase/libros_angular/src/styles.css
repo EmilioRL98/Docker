@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    color-scheme: dark-light;
+}
+
+body{
+    background-color:#D4B8A0 !important;
+    color: black!important;
+}
+
+
+.page-footer {
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #2d3e50;
+    text-align: center;
+    color: white;
+}
+
