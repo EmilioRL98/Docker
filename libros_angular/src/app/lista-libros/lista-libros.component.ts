@@ -22,6 +22,12 @@ export class ListaLibrosComponent {
     this.listarTodosLosLibros();
   }
 
+
+  verCapitulos(libroId: number): void {
+    this.routers.navigate(['/capitulos', libroId]);
+  }
+  
+
   private listarTodosLosLibros(){
     //el subscribe nos permite recibir los valores que emite el observable
     this.libroService.listarLibros().subscribe(

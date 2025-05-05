@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { ListaLibrosComponent } from './lista-libros/lista-libros.component';
 import { AgregarLibroComponent } from './agregar-libro/agregar-libro.component';
 import { EditarLibroComponent } from './editar-libro/editar-libro.component';
+import { CapitulosLibroComponent } from './capitulos-libro/capitulos-libro.component';
 
 
 
@@ -12,7 +13,6 @@ export const routes: Routes = [
 //redirija a inicio si la ruta actual es exactamente la raiz "/"
     {path: '',redirectTo:'inicio', pathMatch: 'full'},
     {path: 'agregar', component: AgregarLibroComponent},
-    {path: 'editar/:id', component: EditarLibroComponent,
-       
-    }
+    {path: 'editar/:id', component: EditarLibroComponent},
+    { path: 'capitulos/:id', component: CapitulosLibroComponent}
 ];

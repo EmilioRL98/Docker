@@ -7,9 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class LibroService {
-  // Cambia las URLs para usar el nombre del servicio backend
-  private urlGet = 'http://backend:8080/libros';
-  private urlPost = 'http://backend:8080/guardar';
+  private urlGet = '/api/libros';
+  private urlPost = '/api/guardar';
 
   constructor(private clientHttp: HttpClient) { }
 
@@ -22,17 +21,17 @@ export class LibroService {
   }
 
   obtenerLibroPorId(id: number): Observable<Libro> {
-    const urlGetId = `http://backend:8080/libros/${id}`;
+    const urlGetId = `/api/libros/${id}`;
     return this.clientHttp.get<Libro>(urlGetId);
   }
 
   editarLibro(id: number, libro: Libro): Observable<Object> {
-    const urlPut = `http://backend:8080/actualizar/${id}`;
+    const urlPut = `/api/actualizar/${id}`;
     return this.clientHttp.put(urlPut, libro, { responseType: 'text' });
   }
 
   borrarLibro(id: number): Observable<Object> {
-    const urlDelete = `http://backend:8080/borrar/${id}`;
+    const urlDelete = `/api/borrar/${id}`;
     return this.clientHttp.delete(urlDelete, { responseType: 'text' });
   }
 }

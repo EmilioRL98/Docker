@@ -20,7 +20,7 @@
           <tbody>
             <!--Para cada libro de la lista creamos una nueva fila con sus datos-->
              @for (libro of librosLista; track libro.id){
-              <tr scope="row">
+              <tr scope="row" (click)="verCapitulos(libro.id)">
               <td>{{libro.id}}</td>
               <td>{{libro.titulo}}</td>
               <td>{{libro.autor}}</td>
